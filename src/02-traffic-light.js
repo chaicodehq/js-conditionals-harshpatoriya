@@ -22,5 +22,16 @@
  * @returns {string} The driving action to take
  */
 export function getTrafficAction(color) {
-  // Your code here
+  var trafficColor = color.toLowerCase();
+  if (trafficColor === "green") {
+    return "GO";
+  } else if (trafficColor === "yellow") {
+    return "SLOW DOWN";
+  } else if (trafficColor === "red") {
+    return "STOP";
+  } else if (trafficColor === "flashing red") {
+    return "STOP AND PROCEED WITH CAUTION";
+  } else {
+    return "INVALID SIGNAL";
+  }
 }
